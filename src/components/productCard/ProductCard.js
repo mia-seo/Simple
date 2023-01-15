@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import { BsCart3 } from 'react-icons/bs';
-import { API } from '../../../config';
-import './product.scss';
+import { API } from '../../config';
+import './productCard.scss';
 
-export const Product = ({
+export const ProductCard = ({
   id,
   product_name,
   thumbnail,
@@ -42,11 +42,11 @@ export const Product = ({
       });
   };
   return (
-    <article className="product" onClick={handleClickItem}>
-      <div className="productCard">
-        <img src={thumbnail} alt="product" className="productImage" />
+    <article className="productCard" onClick={handleClickItem}>
+      <div className="cardHeader">
+        <img src={thumbnail} alt="thumbnail" className="thumbnail" />
         <div className="cartIcon" onClick={handleClickCart}>
-          <BsCart3 className="cart" size="25px" />
+          <BsCart3 size="28px" />
         </div>
       </div>
       <p className="productName">{product_name}</p>

@@ -1,14 +1,14 @@
-@import '../../../styles/variables';
+@import '../../styles/variables';
 
-.product {
+.productCard {
   @include widthHeightSort(328px, null);
   color: $color-main;
   text-decoration: none;
 
-  .productCard {
+  .cardHeader {
     position: relative;
 
-    .productImage {
+    .thumbnail {
       @include widthHeightSort(328px, 328px);
       position: relative;
       border-radius: 5px;
