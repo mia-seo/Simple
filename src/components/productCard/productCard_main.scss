@@ -1,0 +1,10 @@
+@import '../../styles/variables';
+@import './productCard';
+
+.productCardMain {
+  @include widthHeightSort(250px, 250px);
+  color: $color-main;
+  text-decoration: none;
+
+  @include product(250px);
+}

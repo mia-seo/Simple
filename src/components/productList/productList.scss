@@ -1,13 +1,12 @@
-@import '../../../styles/variables';
+@import '../../styles/variables';
 
-.productsSearch {
+.productList {
   @include widthHeightSort(1082px, null);
-  .productsName {
-    font-size: 30px;
-    font-weight: bolder;
-  }
-  .productLists {
+  margin-left: 40px;
+
+  .products {
     @include widthHeightSort(1050px, null);
+    display: flex;
     @include flexSort(null, center, null);
     flex-wrap: wrap;
     gap: 20px;

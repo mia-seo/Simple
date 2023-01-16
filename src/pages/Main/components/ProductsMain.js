@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ProductMain } from './ProductMain';
+import { ProductCard } from '../../../components/productCard/ProductCard';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import './productsMain.scss';
 
@@ -40,7 +40,7 @@ export const ProductsMain = ({ productsName, items }) => {
           style={{ transform: `translate(${px}px)` }}
         >
           {items.map(items => (
-            <ProductMain className="productCard" key={items.id} {...items} />
+            <ProductCard key={items.id} {...items} type="main" />
           ))}
         </div>
       </div>

@@ -1,14 +1,13 @@
-@import '../../../styles/variables';
+@import '../../styles/variables';
 
-.productSearch {
-  @include widthHeightSort(328px, null);
-
-  .productCard {
+@mixin product($widthHeight) {
+  .cardHeader {
     position: relative;
 
-    .productImage {
-      @include widthHeightSort(328px, 328px);
+    .thumbnail {
       position: relative;
+      width: $widthHeight;
+      height: $widthHeight;
       border-radius: 5px;
       background-repeat: no-repeat;
       background-position: center;
@@ -34,6 +33,14 @@
     font-size: 18px;
     font-weight: bolder;
   }
+}
+
+.productCard {
+  @include widthHeightSort(328px, null);
+  color: $color-main;
+  text-decoration: none;
+
+  @include product(328px);
 
   .productDesc {
     font-size: 15px;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Products } from './components/products';
+import { ProductList } from '../../components/productList/ProductList';
 import { API } from '../../config';
 import './search.scss';
 
@@ -21,7 +21,7 @@ const Search = () => {
       <div className="titleArea">
         '{searchParams.get('search')}'에 대한 검색결과
       </div>
-      <Products items={items} />
+      <ProductList items={items} />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Products } from './components/Products';
+import { ProductList } from '../../components/productList/ProductList';
 import { API } from '../../config';
 import './itemList.scss';
 
@@ -46,7 +46,7 @@ const ItemLists = () => {
           <option value="expensive">가격 높은 순</option>
         </select>
       </div>
-      <Products items={items} />
+      <ProductList items={items} />
     </div>
   );
 };
