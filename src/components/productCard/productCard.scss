@@ -1,16 +1,13 @@
 @import '../../styles/variables';
 
-.productCard {
-  @include widthHeightSort(328px, null);
-  color: $color-main;
-  text-decoration: none;
-
+@mixin product($widthHeight) {
   .cardHeader {
     position: relative;
 
     .thumbnail {
-      @include widthHeightSort(328px, 328px);
       position: relative;
+      width: $widthHeight;
+      height: $widthHeight;
       border-radius: 5px;
       background-repeat: no-repeat;
       background-position: center;
@@ -36,6 +33,14 @@
     font-size: 18px;
     font-weight: bolder;
   }
+}
+
+.productCard {
+  @include widthHeightSort(328px, null);
+  color: $color-main;
+  text-decoration: none;
+
+  @include product(328px);
 
   .productDesc {
     font-size: 15px;

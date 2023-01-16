@@ -6,7 +6,7 @@ export const ProductList = ({ items }) => {
     <div className="productList">
       <div className="products">
         {items.map(items => (
-          <ProductCard key={items.id} {...items} />
+          <ProductCard key={items.id} {...items} type="itemList" />
         ))}
       </div>
     </div>

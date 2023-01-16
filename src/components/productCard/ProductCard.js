@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { BsCart3 } from 'react-icons/bs';
 import { API } from '../../config';
 import './productCard.scss';
+import './productCard_main.scss';
 
 export const ProductCard = ({
   id,
@@ -11,6 +12,7 @@ export const ProductCard = ({
   option_category_id,
   price,
   contents,
+  type,
 }) => {
   const navigate = useNavigate();
   const handleClickItem = () => {
@@ -42,7 +44,10 @@ export const ProductCard = ({
       });
   };
   return (
-    <article className="productCard" onClick={handleClickItem}>
+    <article
+      className={type === 'main' ? 'productCardMain' : 'productCard'}
+      onClick={handleClickItem}
+    >
       <div className="cardHeader">
         <img src={thumbnail} alt="thumbnail" className="thumbnail" />
         <div className="cartIcon" onClick={handleClickCart}>
